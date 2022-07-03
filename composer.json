@@ -1,0 +1,32 @@
+{
+    "name": "fateme-mahmoodi/laravel_todo",
+    "description": "laravel todo is a package that can use for todo list on your project",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FatemeMahmoodi\\LaravelToDo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FatemeMahmoodi\\LaravelToDo\\Tests\\": "tests/",
+            "FatemeMahmoodi\\LaravelToDo\\Database\\Factories\\": "database/factories/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FatemeMahmoodi\\LaravelToDo\\LaravelTodoServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.8",
+        "laravel/legacy-factories": "^1.0.4"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertDeprecationsToExceptions="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         verbose="true"
+>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="TodoLover">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_ENV" value="self-testing"/>
+        <env name="APP_KEY" value="base64:yk+bUVuZa1p86Dqjk9OjVK2R1pm6XHxC6xEKFq8utH0="/>
+        <env name="CACHE_DRIVER" value="file"/>
+        <env name="MAIL_FROM_ADDRESS" value="from@example.com"/>
+        <env name="MAIL_FROM_NAME" value="Example"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+    </php>
+</phpunit>
