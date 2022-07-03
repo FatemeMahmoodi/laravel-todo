@@ -34,5 +34,8 @@ email : fatememahmoodi77527@gmail.com
 * 0.1
     * Initial Release
 
+ ## Run Test
+ composer phpunit
+
 ## License
 MIT
