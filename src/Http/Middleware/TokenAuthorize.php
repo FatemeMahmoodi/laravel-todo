@@ -30,7 +30,6 @@ class TokenAuthorize
 
     private function isValidToken($token)
     {
-
         $user = User::where('token', $this->parseToken($token))->first();
         if ($user === null) {
             return false;

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 abstract class TestCase extends BaseTestCase
 {
   use CreatesApplication, RefreshDatabase;
+
     protected $faker;
 
     public function setUp(): void
