@@ -4,30 +4,28 @@ namespace FatemeMahmoodi\LaravelToDo\Tests;
 use FatemeMahmoodi\LaravelToDo\LaravelTodoServiceProvider;
 use FatemeMahmoodi\LaravelToDo\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redis;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-abstract class TestCase extends Orchestra\Testbench\TestCase
+abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
     /**
      *  use package https://www.larablocks.com/package/orchestra/testbench
      */
-  use CreatesApplication, RefreshDatabase;
+  use  DatabaseMigrations,RefreshDatabase;
 
     protected $faker;
 
     public function setUp(): void
     {
-
         $this->faker = \Faker\Factory::create();
         parent::setUp();
+        $this->withFactories(__DIR__.'/../database/factories');
+
+        $this->loadLaravelMigrations(["--database" => "testbench"]);
         $this->artisan('migrate', [
             '--database' => 'testbench',
-            '--realpath' => realpath(__DIR__.'/../migrations'),
+            '--realpath' => realpath(__DIR__."/../database/migrations"),
         ]);
-        $this->withFactories(__DIR__.'/factories');
 
     }
 

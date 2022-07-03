@@ -20,7 +20,7 @@ $factory->define(FatemeMahmoodi\LaravelToDo\Models\User::class, function (Faker 
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
-        'token' => \Illuminate\Support\Str::random(50),
         'remember_token' => \Illuminate\Support\Str::random(10),
+        'token' => \Illuminate\Support\Str::random(50),
     ];
 });

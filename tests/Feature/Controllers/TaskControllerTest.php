@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Controllers;
+namespace FatemeMahmoodi\LaravelToDo\Tests\Feature\Controllers;
 
 
 use FatemeMahmoodi\LaravelToDo\Enums\TaskStatus;
@@ -8,7 +8,7 @@ use FatemeMahmoodi\LaravelToDo\Mail\SendEmailTaskStatusUpdated;
 use FatemeMahmoodi\LaravelToDo\Models\Task;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Mail;
-use Tests\TestCase;
+use FatemeMahmoodi\LaravelToDo\Tests\TestCase;
 use Illuminate\Support\Str;
 use FatemeMahmoodi\LaravelToDo\Models\Label;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Feature\Controllers;
+namespace FatemeMahmoodi\LaravelToDo\Tests\Feature\Controllers;
 
 
 use FatemeMahmoodi\LaravelToDo\Models\Task;
-use Tests\TestCase;
+use FatemeMahmoodi\LaravelToDo\Tests\TestCase;
 use Illuminate\Support\Str;
 use FatemeMahmoodi\LaravelToDo\Models\Label;
 
