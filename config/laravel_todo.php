@@ -2,5 +2,5 @@
 
 
 return [
-    'task_owner_moder' => \App\Models\User::class
+    'task_owner_moder' => \FatemeMahmoodi\LaravelToDo\Models\User::class
 ];

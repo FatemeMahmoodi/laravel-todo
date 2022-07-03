@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\User::class, function (Faker $faker) {
+$factory->define(FatemeMahmoodi\LaravelToDo\Models\User::class, function (Faker $faker) {
     static $password;
 
     return [

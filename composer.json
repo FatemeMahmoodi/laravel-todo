@@ -22,11 +22,11 @@
             ]
         }
     },
-    "require-dev": {
-        "orchestra/testbench": "^5.8",
-        "laravel/legacy-factories": "^1.0.4"
-    },
+
     "scripts": {
         "test": "phpunit"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0"
     }
 }
