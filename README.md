@@ -26,7 +26,6 @@ composer require FatemeMahmoodi/laravel-todo
 
 ## Authors
 
-Contributors names and contact info
 Fateme mahmoodi
 email : fatememahmoodi77527@gmail.com
 
