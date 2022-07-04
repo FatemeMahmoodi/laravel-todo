@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources;
+namespace FatemeMahmoodi\LaravelToDo\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 

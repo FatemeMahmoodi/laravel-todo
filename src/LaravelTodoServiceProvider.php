@@ -48,7 +48,16 @@ class LaravelTodoServiceProvider extends ServiceProvider
      */
     private function registerRoutes()
     {
-        $this->loadRoutesFrom(__DIR__ . "/../routes/api.php");
+
+        Route::group(
+            [
+                "prefix" => "api/laravel_todo",
+               // "middleware" => "todo_lover_api",
+            ],
+            function () {
+                $this->loadRoutesFrom(__DIR__ . "/../routes/api.php");
+            }
+        );
     }
 
     private function registerBindings()

@@ -1,5 +1,7 @@
 <?php
 
+use FatemeMahmoodi\LaravelToDo\Http\Controllers\LabelController;
+use FatemeMahmoodi\LaravelToDo\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group( ['prefix' => 'laravel_todo' ,'middleware' => ['api']], function () {
+Route::group( ['middleware' => ['api' ,\FatemeMahmoodi\LaravelToDo\Http\Middleware\TokenAuthorize::class]], function () {
     Route::resource('labels', LabelController::class);
     Route::resource('tasks', TaskController::class);
 });

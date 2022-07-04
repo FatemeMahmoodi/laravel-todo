@@ -18,6 +18,7 @@ class TaskControllerTest extends TestCase
 
     public function testCreateTask()
     {
+       // $this->withExceptionHandling();
         $user = $this->createAuthUser();
         $labels = factory(Label::class, 5)->create()
             ->pluck('id')->toArray();
@@ -67,9 +68,10 @@ class TaskControllerTest extends TestCase
 
     public function testDeleteTask()
     {
+       // $this->withoutExceptionHandling();
         $user = $this->createAuthUser();
         $task = factory(Task::class)->create(['user_id' => $user->id]);
-        $response = $this->delete('api/laravel_todo/tasks/' . $task->id);
+        $response = $this->delete('api/laravel_todo/tasks/'.$task->id);
         $response->assertSuccessful();
         $this->assertNull(Task::find($task->id));
 

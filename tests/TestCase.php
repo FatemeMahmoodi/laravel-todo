@@ -5,13 +5,14 @@ use FatemeMahmoodi\LaravelToDo\LaravelTodoServiceProvider;
 use FatemeMahmoodi\LaravelToDo\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
+    use RefreshDatabase;
     /**
      *  use package https://www.larablocks.com/package/orchestra/testbench
      */
-  use  DatabaseMigrations,RefreshDatabase;
+
 
     protected $faker;
 
@@ -20,12 +21,12 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         $this->faker = \Faker\Factory::create();
         parent::setUp();
         $this->withFactories(__DIR__.'/../database/factories');
-
-        $this->loadLaravelMigrations(["--database" => "testbench"]);
-        $this->artisan('migrate', [
-            '--database' => 'testbench',
-            '--realpath' => realpath(__DIR__."/../database/migrations"),
+       // $this->loadLaravelMigrations(["--database" => "testbench"]);
+        $this->loadMigrationsFrom([
+            "--database" => "testbench",
+            "--path" => realpath(__DIR__ . "/../database/migrations"),
         ]);
+
 
     }
 
