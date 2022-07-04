@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group( ['middleware' => config('laravel_todo.middlewares')], function () {
-    Route::resource('labels', LabelController::class);
-    Route::resource('tasks', TaskController::class);
-});
+Route::group(
+    ['middleware' => config('laravel_todo.middlewares')],
+    function () {
+        Route::resource('labels', LabelController::class);
+        Route::resource('tasks', TaskController::class);
+    });
 
