@@ -18,12 +18,12 @@ laravel todo is a package that can use for todo list on your project",
 
 composer require FatemeMahmoodi/laravel-todo
 
-###Publishing File Groups
-####Views
+### Publishing File Groups
+#### Views
 php artisan vendor:publish --tag=laravel_todo-views
-####Config
+#### Config
 php artisan vendor:publish --tag=laravel_todo-config
-####Migrations
+#### Migrations
 php artisan vendor:publish --tag=laravel_todo-migrations
 
 
