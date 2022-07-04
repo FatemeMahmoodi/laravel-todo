@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group( ['middleware' => ['api' ,\FatemeMahmoodi\LaravelToDo\Http\Middleware\TokenAuthorize::class]], function () {
+Route::group( ['middleware' => config('laravel_todo.middlewares')], function () {
     Route::resource('labels', LabelController::class);
     Route::resource('tasks', TaskController::class);
 });
