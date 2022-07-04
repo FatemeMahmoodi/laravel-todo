@@ -23,11 +23,11 @@ composer require FatemeMahmoodi/laravel-todo
 
 ### Publishing File Groups
 ```
-#### Views
+1.Views
 php artisan vendor:publish --tag=laravel_todo-views
-#### Config
+2.Config
 php artisan vendor:publish --tag=laravel_todo-config
-#### Migrations
+3.Migrations
 php artisan vendor:publish --tag=laravel_todo-migrations
 ```
 
@@ -48,7 +48,7 @@ php artisan vendor:publish --tag=laravel_todo-migrations
  fatememahmoodi77527@gmail.com
 
 ## Version History
-* 0.1
+* 1.0.0
     * Initial Release
 
  ## Run Test
