@@ -2,7 +2,6 @@
 
 use Faker\Generator as Faker;
 use FatemeMahmoodi\LaravelToDo\Models\Task;
-use FatemeMahmoodi\LaravelToDo\Models\User;
 use FatemeMahmoodi\LaravelToDo\Enums\TaskStatus;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -23,6 +22,6 @@ $factory->define(Task::class, function (Faker $faker) {
         'title' => $faker->word,
         'description' => $faker->sentence,
         "status" => Arr::random(TaskStatus::ALL),
-        'user_id' => factory(User::class)
+        'user_id' => factory(config('laravel_todo.task_owner'))
     ];
 });

@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(FatemeMahmoodi\LaravelToDo\Models\User::class, function (Faker $faker) {
+$factory->define(config('laravel_todo.task_owner'), function (Faker $faker) {
     static $password;
 
     return [

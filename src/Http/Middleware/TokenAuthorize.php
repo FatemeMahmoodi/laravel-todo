@@ -30,7 +30,11 @@ class TokenAuthorize
 
     private function isValidToken($token)
     {
-        $user = User::where('token', $this->parseToken($token))->first();
+        $user = config('laravel_todo.task_owner')
+            ::where(
+                'token', $this->parseToken($token)
+            )
+            ->first();
         if ($user === null) {
             return false;
         }

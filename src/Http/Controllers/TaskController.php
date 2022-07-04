@@ -11,7 +11,6 @@ use FatemeMahmoodi\LaravelToDo\Http\Resources\OperationResource;
 use FatemeMahmoodi\LaravelToDo\Http\Resources\TaskResource;
 use FatemeMahmoodi\LaravelToDo\Interfaces\Repositories\TaskRepositoryInterface;
 use FatemeMahmoodi\LaravelToDo\Models\Task;
-use FatemeMahmoodi\LaravelToDo\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

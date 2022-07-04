@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use FatemeMahmoodi\LaravelToDo\Models\User;
 
 class CreateUsersTable extends Migration
 {
@@ -13,7 +14,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('users'))
+        if (
+            config('laravel_todo.task_owner') == User::class
+            &&
+            !Schema::hasTable('users')
+        )
             Schema::create('users', function (Blueprint $table) {
                 $table->id();
                 $table->string('name');

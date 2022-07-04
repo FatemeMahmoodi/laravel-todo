@@ -48,7 +48,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
 
     public function createAuthUser()
     {
-        $user = factory(User::class)->create();
+        $user = factory(config('laravel_todo.task_owner'))->create();
         $this->withToken($user->token);
         return $user;
     }

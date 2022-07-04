@@ -21,7 +21,7 @@ class Task extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(config('laravel_todo.task_owner'));
     }
 
     public function scopeCreator($query , $user)
