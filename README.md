@@ -22,12 +22,14 @@ composer require FatemeMahmoodi/laravel-todo
 ```
 
 ### Publishing File Groups
+```
 #### Views
 php artisan vendor:publish --tag=laravel_todo-views
 #### Config
 php artisan vendor:publish --tag=laravel_todo-config
 #### Migrations
 php artisan vendor:publish --tag=laravel_todo-migrations
+```
 
 ### Set up
 #### Config
