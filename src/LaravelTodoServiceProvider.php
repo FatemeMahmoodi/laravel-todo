@@ -81,13 +81,17 @@ class LaravelTodoServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/laravel_todo.php' => config_path('laravel_todo.php'),
-        ], 'laravel_todo');
+        ], 'laravel_todo-config');
 
         $this->publishes([
 
             __DIR__ . '/../resources/views/emails' => resource_path('views/vendor/laravelTodo/emails'),
 
-        ], 'laravel_todo');
+        ], 'laravel_todo-views');
+
+        $this->publishes([
+            __DIR__.'/../database/migrations/' => database_path('migrations')
+        ], 'laravel_todo-migrations');
     }
 
     protected function registerViews()

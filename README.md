@@ -18,24 +18,24 @@ laravel todo is a package that can use for todo list on your project",
 
 composer require FatemeMahmoodi/laravel-todo
 
-### Executing program
-
-
-## Help
+###Publishing File Groups
+####Views
+php artisan vendor:publish --tag=laravel_todo-views
+####Config
+php artisan vendor:publish --tag=laravel_todo-config
+####Migrations
+php artisan vendor:publish --tag=laravel_todo-migrations
 
 
 ## Authors
-
-Fateme mahmoodi
-email : fatememahmoodi77527@gmail.com
+ fatememahmoodi77527@gmail.com
 
 ## Version History
-
 * 0.1
     * Initial Release
 
  ## Run Test
- composer phpunit
+ composer run test
 
 ## License
 MIT
