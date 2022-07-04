@@ -49,7 +49,7 @@ php artisan vendor:publish --tag=laravel_todo-migrations
  fatememahmoodi77527@gmail.com
 
 ## Version History
-* 1.0.0
+* v1.0.1
     * Initial Release
 
  ## Run Test
