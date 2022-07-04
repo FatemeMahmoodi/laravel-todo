@@ -44,10 +44,7 @@ php artisan vendor:publish --tag=laravel_todo-migrations
 'middlewares' => ['api', \FatemeMahmoodi\LaravelToDo\Http\Middleware\TokenAuthorize::class]
 
 ```
-3. we use mill for send notification see :
-```
-https://mailtrap.io/
-```
+3. we use mill for send notification see https://mailtrap.io for more info
 
 ## Authors
  fatememahmoodi77527@gmail.com
