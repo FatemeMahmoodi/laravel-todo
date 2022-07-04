@@ -5,7 +5,8 @@ todo list
 ## Description
 
 laravel todo is a package that can use for todo list on your project
-you also can filter your tasks by define labels for them 
+#####
+you can also filter your tasks by define labels for them 
 
  
 
