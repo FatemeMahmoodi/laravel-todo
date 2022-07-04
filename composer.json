@@ -3,6 +3,10 @@
     "description": "laravel todo is a package that can use for todo list on your project",
     "type": "library",
     "license": "MIT",
+    "require": {
+        "php": "7.4",
+        "laravel/framework": "^7.0"
+    },
     "autoload": {
         "psr-4": {
             "FatemeMahmoodi\\LaravelToDo\\": "src/"
